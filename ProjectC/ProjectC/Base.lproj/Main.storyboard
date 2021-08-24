@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ProjectC" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="elq-7G-66R">
+                                <rect key="frame" x="141.5" y="278" width="131" height="32"/>
+                                <segments>
+                                    <segment title="First"/>
+                                    <segment title="Second"/>
+                                </segments>
+                                <connections>
+                                    <action selector="segFunc:" destination="BYZ-38-t0r" eventType="valueChanged" id="VaJ-i2-rpJ"/>
+                                </connections>
+                            </segmentedControl>
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="hOZ-Ew-DQ1">
+                                <rect key="frame" x="160" y="406" width="94" height="32"/>
+                                <connections>
+                                    <action selector="stepFunc:" destination="BYZ-38-t0r" eventType="valueChanged" id="Mgm-K0-QPM"/>
+                                </connections>
+                            </stepper>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="o1A-n8-JnE">
+                                <rect key="frame" x="197" y="344" width="20" height="20"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="o1A-n8-JnE" firstAttribute="top" secondItem="elq-7G-66R" secondAttribute="bottom" constant="35" id="8T2-YT-E0g"/>
+                            <constraint firstItem="elq-7G-66R" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="234" id="g4p-dn-jLa"/>
+                            <constraint firstItem="hOZ-Ew-DQ1" firstAttribute="top" secondItem="elq-7G-66R" secondAttribute="bottom" constant="97" id="nHX-7o-pT2"/>
+                            <constraint firstItem="o1A-n8-JnE" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="qFA-CV-Ksh"/>
+                            <constraint firstItem="hOZ-Ew-DQ1" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="qdg-RL-Z8Y"/>
+                            <constraint firstItem="elq-7G-66R" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="znc-l1-c7G"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="act" destination="o1A-n8-JnE" id="41d-5S-hvU"/>
+                        <outlet property="segA" destination="elq-7G-66R" id="fll-IP-GLm"/>
+                        <outlet property="stepA" destination="hOZ-Ew-DQ1" id="xjr-HJ-cBA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-214" y="76"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
